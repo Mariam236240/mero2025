@@ -1,0 +1,243 @@
+/* HERO SECTION */
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111;
+}
+
+/* Scrolling background */
+.scrolling-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: max-content;
+  animation: scroll-left 40s linear infinite;
+  z-index: 1;
+}
+
+.scrolling-background img {
+  height: 50vh;
+  width: auto;
+  object-fit: cover;
+}
+
+/* Cards container above background */
+.cards-container {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  gap: 30px;
+  padding: 0 20px;
+  flex-wrap: wrap; /* optional: wrap on smaller screens */
+  justify-content: center;
+margin-bottom: -600px;
+background-color:black;
+}
+
+/* Individual hero cards */
+.hero-card {
+    background-color: #ccc;/* semi-transparent overlay */
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+
+}
+.icons svg {
+  margin-left: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s;
+}
+
+.icons svg:hover {
+  color: #ff9900; /* highlight on hover */
+}
+
+.hero-card:hover {
+  transform: scale(1.05);
+}
+
+/* Card images */
+.hero-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Card titles */
+.hero-card h2 {
+  color: white;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+/* Background scrolling animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .cards-container {
+    gap: 20px;
+  }
+
+  .hero-card {
+    width: 200px;
+  }
+
+  .hero-card h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-card {
+    width: 150px;
+    padding: 15px;
+  }
+
+  .hero-card h2 {
+    font-size: 1.2rem;
+  }
+}
+/* HEADER / NAVIGATION */
+.header {
+  position: relative;
+  z-index: 20; /* above Hero scrolling background */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: rgba(0, 0, 0, 0.7); /* semi-transparent */
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav a {
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #ff9900; /* highlight color */
+}
+
+.icons span {
+  margin-left: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+/* FOOTER */
+.footer {
+  position: relative;
+  z-index: 20; /* above Hero background */
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center; 
+  flex-wrap: wrap;
+  padding: 40px 30px;
+  background-color: rgba(0, 0, 0, 0.8); /* dark semi-transparent */
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+
+}
+
+.footer p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.footer a {
+  color: #ff9900;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* NEWSLETTER SECTION */
+.newsletter {
+  position: relative;
+  z-index: 10;
+  background-color: #111; /* dark background to match theme */
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.newsletter h2 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.newsletter-box {
+  margin-top: 15px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.newsletter-box input {
+  padding: 12px 15px;
+  width: 280px;
+  max-width: 90%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.newsletter-box button {
+  padding: 12px 25px;
+  background-color: #ff9900; /* highlight color */
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.newsletter-box button:hover {
+  background-color: #e68a00; /* darker on hover */
+}
+
+.newsletter p {
+  width: 60%;
+  max-width: 500px;
+  margin: 20px auto 0;
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.5;
+}
